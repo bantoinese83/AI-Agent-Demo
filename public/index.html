@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Assistant</title>
+    <meta name="description" content="Modern AI assistant powered by advanced language models">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Local icon library -->
+    <script src="icons.js"></script>
+</head>
+<body>
+    <div class="app">
+        <main class="main">
+            <!-- Header Section -->
+            <div class="header-section">
+                <div class="tagline">READY IN SECONDS</div>
+                <h1 class="main-title">
+                    <span class="white-text">Elevate your</span><br>
+                    <span class="colored-text">digital</span> <span class="white-text">presence</span>
+                </h1>
+                <div class="subtitle">Crafted with precision</div>
+            </div>
+
+            <!-- Suggestions -->
+            <div class="suggestions" id="suggestions">
+                <div class="suggestion-item" data-suggestion="Help me plan a game night with my 5 best friends for under $100.">
+                    <div class="suggestion-icon" id="gamepad-icon"></div>
+                    <span>Help me plan a game night with my 5 best friends for under $100.</span>
+                    <div class="suggestion-arrow" id="arrow-right-icon-1"></div>
+                </div>
+                <div class="suggestion-item" data-suggestion="What are the best tips to improve my public speaking skills?">
+                    <div class="suggestion-icon" id="mic-icon"></div>
+                    <span>What are the best tips to improve my public speaking skills?</span>
+                    <div class="suggestion-arrow" id="arrow-right-icon-2"></div>
+                </div>
+                <div class="suggestion-item" data-suggestion="Can you help me find the latest news on web development?">
+                    <div class="suggestion-icon" id="code-icon"></div>
+                    <span>Can you help me find the latest news on web development?</span>
+                    <div class="suggestion-arrow" id="arrow-right-icon-3"></div>
+                </div>
+                <div class="suggestion-item" data-suggestion="Write JavaScript code to sum all elements in an array.">
+                    <div class="suggestion-icon" id="zap-icon"></div>
+                    <span>Write JavaScript code to sum all elements in an array.</span>
+                    <div class="suggestion-arrow" id="arrow-right-icon-4"></div>
+                </div>
+            </div>
+
+            <!-- Chat Messages -->
+            <div class="messages" id="messages"></div>
+
+            <!-- Input Section -->
+            <div class="input-section">
+                <form id="query-form" class="query-form">
+                    <div class="input-wrapper">
+                        <textarea
+                            id="query-input"
+                            placeholder="Enter a prompt here"
+                            rows="1"
+                            maxlength="1000"
+                            required
+                            autocomplete="off"
+                        ></textarea>
+                        <div class="input-actions">
+                            <button type="submit" id="submit-btn" class="submit-btn" disabled>
+                                <div id="send-icon"></div>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+
+                <!-- Status indicator -->
+                <div class="status-indicator" id="status">
+                    <div class="status-dot" id="connection-status"></div>
+                    <span class="status-text" id="status-text">Ready</span>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p class="footer-text">Mega-bot may display inaccurate info, including about people, so double-check its responses.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
